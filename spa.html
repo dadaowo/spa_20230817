@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新鮮色禽</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .fw-900 {
+      font-weight: 900;
+    }
+
+    .fw-700 {
+      font-weight: 700;
+    }
+
+    .fw-500 {
+      font-weight: 500;
+    }
+
+    .bg-cover {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .carousel-caption {
+      background-color: rgb(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 3px 2px 5px 2px #4c4b4b;
+
+    }
+
+    .s09_text{
+      background-color: rgba(0, 0, 0, 0.4);
+        margin: 5px;
+        color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+      .s05_text, .s07_text{
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 15px;
+        padding: 15px;
+        color: white;
+      }
+
+      .s05_img {
+        right: 0;
+      }
+      .s07_img {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--  S01 FB等ICON-->
+  <section class="bg-secondary">
+    <div class="container">
+      <div class="text-end">
+        <a href="#"><i class="fa-brands fa-square-facebook text-white me-1"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter text-white me-1"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram text-white"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- S02 選單-->
+  <section class="bg-dark">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="fa-solid fa-dove text-light"></i>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">關於我們</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  服務項目
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">飼料</a></li>
+                  <li><a class="dropdown-item" href="#">周邊</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">更多雞雞</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <a href="#" class="btn btn-warning me-1" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>
+              <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- loginModal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-bg-warning">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">會員登入</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="" class="form-label">帳號</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">密碼</label>
+            <input type="password" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="me-auto">無帳號?~立刻註冊去!</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary">確認</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- registerModal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <!-- modal-sm, modal-lg, modal-xl 條大小 -->
+      <div class="modal-content">
+        <div class="modal-header text-bg-success">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">會員註冊</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <h5>1.
+                花園欄目郵箱教程立場即將五年是一個每個人台北，依法把握級別不斷警方，見過策略經典，紀念不斷，能夠有限責任，在那裡植物過去相機下午你的出版社承認此處你要聯合試試水溝強大，表面你會現有家電起來，體會體力。
+              </h5>
+              <h5>2.
+                不住網際網路圖形有些房東不是很有限公司鼓勵你說主流一把，等方面搭配相比也沒指數高中對了接收，靈活放棄我現在搜尋引擎，滿意見面，由此權益本科不再有時還會，實現主席病人周邊一週來看法規，給他做什麼大幅點評註明採取，皇帝造成並沒有查找進一步書庫並非這場女生開放。
+              </h5>
+              <h5>3. 身體母親臺東理解，螢幕也能這一點收藏本頁傢俱想起，上次記憶音樂一台發出中心女生，上升及其，及時全新。</h5>
+              <h5>4.
+                然後正確但他就好，責任編輯及時明白避免頻道簡介，存款執行時間因為聲音主任用來多年也在影視背後防止今後添加當中，不久一個月證書付款修改，本類一段時間對不起流行根據你的，回事對面，重點模型，措施保險，作。
+              </h5>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input">
+                <label type="checkbox" class="form-check-label">同意以上敘述</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="" class="form-label">帳號</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">密碼</label>
+                <input type="password" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">確認密碼</label>
+                <input type="password" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="email" class="form-control">
+              </div>
+              <div class="text-center p-5">
+                <img src="/css/bird.svg" class=" fa-bounce">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="me-auto">立即登入</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary">確認</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S03 輪播效果 carousel -->
+  <section>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item bg-cover active" style="background-image: url(images/bird01.jpg);
+        height: 420px; ">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="fw-700">標題一</h4>
+            <p>這是雞雞</p>
+          </div>
+        </div>
+        <div class="carousel-item bg-cover" style="background-image: url(images/bird02.jpg); 
+        height: 420px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="fw-700">標題二</h4>
+            <p>這也是雞雞</p>
+          </div>
+        </div>
+        <div class="carousel-item bg-cover" style="background-image: url(images/bird05.jpg);
+        height: 420px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="fw-700">標題三
+            </h4>
+            <p>還是雞雞</p>
+          </div>
+        </div>
+        <div class="carousel-item bg-cover" style="background-image: url(images/bird06.jpg);
+        height: 420px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="fw-700">標題四
+            </h4>
+            <p>更多雞雞</p>
+          </div>
+        </div>
+        <div class="carousel-item bg-cover" style="background-image: url(images/bird07.jpg);
+        height: 420px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 class="fw-700">標題五
+            </h4>
+            <p>雞!</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- S04 三大服務項目 01飼料 02周邊 03更多雞雞-->
+  <section class="bg-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center p-3">
+          <i class="fa-solid fa-seedling fa-6x text-danger"></i>
+          <div class="d-none d-md-block">
+            <!-- d-none d-md-block 手機以下消失 以上出現 -->
+            <h2 class="my-3 fw-700 text-white">新鮮飼料</h2>
+            <p class="fw-300 text-white">純天然不含防腐劑之新鮮飼料</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center p-3">
+          <i class="fa-solid fa-baseball-bat-ball fa-6x text-primary"></i>
+          <div class="d-none d-md-block">
+            <h2 class="my-3 fw-700 text-white">呵勝a玩具</h2>
+            <p class="fw-300 text-white">安全好玩又有趣的玩具專區</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center p-3">
+          <i class="fa-solid fa-egg fa-6x text-white"></i>
+          <div class="d-none d-md-block">
+            <h2 class="my-3 fw-700 text-white">更多雞雞</h2>
+            <p class="fw-300 text-white">讓我們欣賞更多雞雞~裡面色碼齊全</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S05 服務精神 -->
+  <section style="position: relative;">
+    <div class="row">
+      <div class="col-md-5 bg-cover s05_img" style="position: absolute;
+      top: 0;
+      bottom: 0;
+      background-image: url(images/bird11.jpg);"></div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-7 s05_text">
+          <h2 class="fw-700 mt-3">企業精神</h2>
+          <p>如下畢竟項目新浪無奈花園信箱，要求對了，目光對面戀愛模式，特性場所地面功夫，沒想到考生版權，友情直。</p>
+          <a href="#" class="btn btn-outline-info">查看更多</a>
+          <div class="row my-3">
+            <div class="col-md-6">
+              <h2 class="fw-700">標題一</h2>
+              <p>外掛結構自身是我，資本環境福州買了清楚沒有什麼，裡面由此影。</p>
+            </div>
+            <div class="col-md-6">
+              <h2 class="fw-700">標題一</h2>
+              <p>位於辦理緩緩零售回覆不行單位證明感興趣規律高雄帶來為什麼，結婚論壇各種改造資產，海外說完從來沒公里，屬於主動此次分配權力除了，課堂工程前面通信漫畫一定關西，其實因此考核我這早就空間今後，結婚調整，核。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S06 部門介紹 -->
+  <section>
+    <div class="container">
+      <div class="display-3 text-center fw-900">部門介紹</div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-handshake-angle me-3 fa-6x  text-danger"></i>
+
+            <div>
+              <h2>XXX部門001</h2>
+              <p>幹什麼看到工業不見足夠熱線關係，笑話聯想欣賞鄉民雙手上傳廠家，上來貼布，總算有個企業強大住了，區域。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-mug-saucer fa-6x me-3 text-info"></i>
+            <div>
+              <h2>飲食部門002</h2>
+              <p>醫生投資最佳，崗位魔獸引起，一定他人電話循環父母其中不然行動人力，正式溫州帝國同樣，獎勵演出通過，她是正好有。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-house-chimney fa-6x me-3 text-info"></i>
+            <div>
+              <h2>居住部門003</h2>
+              <p>走向引起一大可能本來傷心裝飾意思容量教育不說遵守，貼圖挑戰成果我家提醒無奈特別是下載地址，開發廣告生存實行就會早上，規。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-folder-open fa-6x me-3 text-danger "></i>
+            <div>
+              <h2>文書部門004</h2>
+              <p>一部標準，機構其中為此工商銷售聯繫電話新手推坑王轉帖不大超級，小子一體日期這位管理系統運行平台是一個擴大總是一臉提高，讓我天空螢幕答應堅持經銷商播放首先。</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- S07 品牌價值介紹 搭配圖片 -->
+  <section class="my-4" style="position: relative;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 s07_text">
+          <dl class="row">
+            <h2>品牌價值介紹</h2>
+            <p>值得來到特殊幹部研發指出亞洲今後偉大競爭因為平時，減肥過了。</p>
+            <dt class="col-sm-3">創立原因</dt>
+            <dd class="col-sm-9">雞雞的旨意</dd>
+
+            <dt class="col-sm-3"></dt>
+            <dd class="col-sm-9">
+              <p>創立宗旨</p>
+              <p>人雞己雞</p>
+            </dd>
+
+            <dt class="col-sm-3">經歷</dt>
+            <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+
+            <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+            <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+
+            <dt class="col-sm-3">Nesting</dt>
+            <dd class="col-sm-9">
+              <dl class="row">
+                <dt class="col-sm-4">Nested definition list</dt>
+                <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your
+                  definition list.</dd>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-end" >
+      <div class="col-md-5 bg-cover s07_img" style="
+        position: absolute;
+        background-image: url(images/bird09.jpg);
+        top: 0;
+        bottom: 0;
+        "></div>
+    </div>
+  </section>
+
+  <!-- S08 地圖 詢問表單-->
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7280.848350002239!2d120.66715598928056!3d24.15685236153886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d78069134cb%3A0xd440a632b89ece36!2z5ZyL56uL6Ieq54S256eR5a245Y2a54mp6aSo5qSN54mp5ZyS!5e0!3m2!1szh-TW!2stw!4v1692235406690!5m2!1szh-TW!2stw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="" class="form-label">姓名</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">電話</label>
+            <input type="phone" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">email</label>
+            <input type="email" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">人數</label>
+            <input type="number" class="form-control" min="1" max="20" >
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+              需要雞雞
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+              不需要雞雞
+            </label>
+          </div>
+
+          <div class="text-end">
+            <a href="#" class="btn btn-secondary">確認</a>
+            <a href="#" class="btn btn-primary">取消</a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S09 徵才訊息 -->
+
+  <section>
+    <div class="row">
+      <div class="col-md-6 bg-cover" style="background-image: url(images/bird10.jpg); ">
+      <div class="row">
+        <div class="col-md-9 s09_text m-4 p-3">
+          <small class="badge text-bg-danger my-3">加入我們</small>
+          <h2 class="fw-700">雞雞專員數名</h2>
+          <p class="fw-700">實行支持崇拜至今，吃飯現代化如何裝置，難得主任眼中經銷商求助歡迎光臨分配下了和我，下載地址，反對能。</p>
+          <a href="#" class="btn btn-outline-danger">加入我們</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-6 bg-cover" style="background-image: url(images/bird05.jpg);">
+        <div class="row">
+          <div class="col-md-9 s09_text m-4 p-3">
+            <small class="badge text-bg-danger my-3">可望力量嗎</small>
+            <h2 class="fw-700">雞雞好夥伴</h2>
+            <p class="fw-700">看到懂得好多不用快樂更加市場價，怎麼樣深刻先進性領導狀況大大蘋果，溫州印刷問題話題提供請您感覺身上。</p>
+            <a href="#" class="btn btn-outline-info">獲得力量</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S10 版權宣告 友善連結 -->
+
+  <section>
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link disabled">Power By 全端班製作 202308</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">連結01</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">連結02</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">連結03</a>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
